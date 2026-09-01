@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="indigo">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,18 +12,26 @@
 <header>
     <h1>Board <span>Buddy</span></h1>
     <p>Board game helper apps</p>
+    <div class="theme-picker" id="themePicker">
+        <button class="theme-dot" data-theme="current" title="Olive Green"></button>
+        <button class="theme-dot" data-theme="indigo" title="Deep Indigo"></button>
+        <button class="theme-dot" data-theme="earth" title="Warm Earth"></button>
+        <button class="theme-dot" data-theme="slate" title="Slate Blue"></button>
+        <button class="theme-dot" data-theme="forest" title="Forest Green"></button>
+        <button class="theme-dot" data-theme="coral" title="Charcoal Coral"></button>
+    </div>
 </header>
 
 <main>
     <div class="apps">
         <a class="app-card" href="https://forest.boardbuddy.games" target="_blank">
-            <div class="app-icon">🌳</div>
+            <div class="app-icon"><img src="assets/forest-icon.png" alt="Forest Shuffle Calculator"></div>
             <h2>Forest Shuffle Calculator</h2>
             <p>Track scores for Forest Shuffle, Forest Shuffle: Dartmoor and their expansions. See your score break down by zone at a glance.</p>
         </a>
 
         <a class="app-card" href="https://rebellion.boardbuddy.games" target="_blank">
-            <div class="app-icon">⭐</div>
+            <div class="app-icon"><img src="assets/rebellion-icon.png" alt="Star Wars: Rebellion Helper"></div>
             <h2>Star Wars: Rebellion Helper</h2>
             <p>Track system loyalty, build queues, and probe droids across the galaxy. Keep your Rebellion or Empire strategy organised during play.</p>
         </a>
@@ -40,5 +48,35 @@
 <footer>
     &copy; 2026 Board Buddy
 </footer>
+
+<script>
+(function() {
+    const html = document.documentElement;
+    const picker = document.getElementById('themePicker');
+    const dots = picker.querySelectorAll('.theme-dot');
+
+    function applyTheme(name) {
+        html.setAttribute('data-theme', name);
+        localStorage.setItem('boardbuddy-theme', name);
+        dots.forEach(d => d.classList.toggle('active', d.dataset.theme === name));
+    }
+
+    // Restore saved theme
+    var saved = localStorage.getItem('boardbuddy-theme');
+    if (saved) {
+        applyTheme(saved);
+    } else {
+        // Default to indigo
+        applyTheme('indigo');
+    }
+
+    // Click handler
+    dots.forEach(function(dot) {
+        dot.addEventListener('click', function() {
+            applyTheme(dot.dataset.theme);
+        });
+    });
+})();
+</script>
 </body>
 </html>
