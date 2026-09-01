@@ -77,6 +77,13 @@ main {
     transition: box-shadow 0.2s, transform 0.2s;
 }
 
+a.app-card,
+a.app-card:hover,
+a.app-card:focus,
+a.app-card:active {
+    text-decoration: none;
+}
+
 .app-card:hover {
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     transform: translateY(-2px);
