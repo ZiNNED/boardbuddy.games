@@ -8,7 +8,7 @@ A hub page for board game helper apps — calculators, trackers, and tools, all 
 
 | App | Subdomain | Description |
 |---|---|---|
-| **Forest Shuffle Calculator** | [forest.boardbuddy.games](https://forest.boardbuddy.games) | Interactive scoring for Forest Shuffle and its expansions Dartmoor & Exmoor |
+| **Forest Shuffle Calculator** | [forest.boardbuddy.games](https://forest.boardbuddy.games) | Interactive scoring for Forest Shuffle, Forest Shuffle: Dartmoor and its expansions |
 | **Star Wars: Rebellion Helper** | [rebellion.boardbuddy.games](https://rebellion.boardbuddy.games) | Interactive helper map: system loyalty, build queues, probe droids |
 
 More apps coming soon.
