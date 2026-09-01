@@ -227,6 +227,17 @@ a.app-card:active {
     object-fit: contain;
 }
 
+.app-icon-placeholder {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 6px;
+}
+
 .app-card h2 {
     font-size: 1.25rem;
     font-weight: 600;
