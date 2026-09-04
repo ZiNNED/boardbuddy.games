@@ -303,6 +303,11 @@ a.app-card:active {
     margin: 0 auto;
     padding: 3rem 1rem;
     text-align: center;
+
+    details {
+        margin-top: 2rem;
+        cursor: pointer;
+    }
 }
 
 .support h2 {
